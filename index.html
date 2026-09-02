@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Turkey Trip 2026 — семейные фотки с поездки</title>
+<meta name="description" content="Turkey Trip 2026 — приложение для семьи: скидываем фотки из поездки в общий Яндекс.Диск в один тап.">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Turkey Trip 2026 — наверх">
+      <img class="brand-logo" src="./assets/logo.png" alt="" width="40" height="40">
+      <span class="brand-name">Turkey Trip 2026</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#features" data-nav>Возможности</a>
+      <a href="#dev" data-nav>Разработчику</a>
+      <a href="#gallery" data-nav>Галерея</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- MAIN / HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Семейный трип · Турция 2026</p>
+        <h1 class="hero-title">Поездка в Турцию 2026</h1>
+        <p class="hero-subtitle">Сделал крутые фотки? Поделись с остальными. Одна кнопка — фото летит в общий Яндекс.Диск, без чатов и «скинь в вотсап».</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="./downloads/turkey-trip-2026.apk" download>
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Скачать приложение
+          </a>
+          <a class="btn btn-outline" href="#gallery">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l4.586-4.586a2 2 0 0 1 2.828 0L16 16m-2-2 1.586-1.586a2 2 0 0 1 2.828 0L20 14M14 8h.01M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+            Смотреть фотки
+          </a>
+        </div>
+        <p class="hero-cta-note">APK для Android · 19,8 МБ · ставится напрямую, без Google Play</p>
+      </div>
+
+      <div class="hero-globe">
+        <div class="globe-stage" id="globeStage" aria-hidden="true">
+          <div id="globeViz"></div>
+          <div class="globe-fallback" id="globeFallback" hidden>
+            <div class="globe-fallback-orb"></div>
+          </div>
+          <div class="globe-tag globe-tag-start" id="tagStart">Новосибирск</div>
+          <div class="globe-tag globe-tag-end" id="tagEnd">Гёйнюк, Турция</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-inner">
+      <p class="section-eyebrow">Зачем это</p>
+      <h2 class="section-title">Одно приложение — все фотки в одном месте</h2>
+
+      <div class="card-grid">
+        <article class="card reveal-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l4.586-4.586a2 2 0 0 1 2.828 0L16 16m-2-2 1.586-1.586a2 2 0 0 1 2.828 0L20 14M14 8h.01M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+          </div>
+          <h3>Без сторонних чатов</h3>
+          <p>Ни архивов в вотсапе, ни «пришли в оригинале» — фотки летят напрямую в общую папку на Яндекс.Диске, в исходном качестве, без сжатия.</p>
+        </article>
+
+        <article class="card reveal-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8M21 3v5h-5"/></svg>
+          </div>
+          <h3>Докачивает сама</h3>
+          <p>Закрыл приложение, пропал интернет, свернул на пляже — неважно. Загрузка фоновая, нативная, переживает уход из приложения и возвращается сама, как только появилась сеть.</p>
+        </article>
+
+        <article class="card reveal-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3>Напомнит про фотки</h3>
+          <p>Настрелял 10 кадров и забыл про них в галерее? Придёт тихое напоминание — самое время скинуть в общий альбом, пока не забылось.</p>
+        </article>
+
+        <article class="card reveal-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </div>
+          <h3>Три шага — и готово</h3>
+          <p><strong>1.</strong> Открыл приложение → «Загрузить». <strong>2.</strong> Выбрал фотки из галереи. <strong>3.</strong> Подтвердил — дальше само. «Посмотреть» открывает общий альбом на Диске.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEV / CHANGELOG -->
+  <section class="dev-section" id="dev">
+    <div class="section-inner">
+      <button class="dev-toggle" id="devToggle" aria-expanded="false" aria-controls="devPanel">
+        <span class="dev-toggle-prompt">$</span>
+        <span class="dev-toggle-label">cat CHANGELOG.md</span>
+        <svg class="dev-toggle-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+
+      <div class="dev-panel" id="devPanel" hidden>
+        <div class="dev-terminal">
+          <div class="dev-terminal-bar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="dev-terminal-title">turkey-pics-app — CHANGELOG.md</span>
+          </div>
+          <ol class="dev-log" id="devLog"><!-- заполняется из js/main.js --></ol>
+        </div>
+
+        <div class="dev-beta">
+          <svg class="dev-beta-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+          <div class="dev-beta-body">
+            <h3>Beta-версия</h3>
+            <p>Сборки для тестирования новых фич до релиза. Могут быть баги, краши и недоделанные экраны — ставь на свой страх и риск, и лучше не поверх единственной рабочей копии.</p>
+            <a class="btn btn-outline btn-small" href="./downloads/turkey-trip-2026-beta.apk" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Скачать beta APK
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-inner">
+      <p class="section-eyebrow">Последнее с Диска</p>
+      <h2 class="section-title">Свежие кадры из поездки</h2>
+      <p class="gallery-sub">Живая витрина — тянем напрямую с общей папки на Яндекс.Диске.</p>
+
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+        <!-- скелетоны/фото рендерятся из js/gallery.js -->
+      </div>
+
+      <p class="gallery-error" id="galleryError" hidden>
+        Не получилось загрузить превью с Диска. Фотки точно на месте — просто открой альбом напрямую.
+      </p>
+
+      <div class="gallery-cta">
+        <a class="btn btn-outline" href="https://disk.yandex.ru/d/BYYUoJXrqOW2ig" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+          Все фотки на Яндекс.Диске
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Предыдущее фото">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Следующее фото">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 FWT Corp</p>
+    <a href="./LICENSE" target="_blank" rel="noopener noreferrer">Лицензия приложения — GNU GPL v2</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
+<script src="./js/gallery.js"></script>
+<script src="./js/globe.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
