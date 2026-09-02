@@ -100,4 +100,41 @@
       devPanel.hidden = isOpen;
     });
   }
+
+  /* ---------- Размер/дата APK — из downloads/version.json ---------- */
+  // Тот же манифест, что читает UpdateChecker в приложении для проверки
+  // обновлений (см. turkey-pics-app/lib/services/update_checker.dart) —
+  // одна точка правды вместо руками вписанных мегабайт, которые тут же
+  // расходятся с реальным файлом при следующей пересборке.
+  const heroCtaNote = document.getElementById('heroCtaNote');
+  const devBetaNote = document.getElementById('devBetaNote');
+
+  const formatMb = (bytes) => (bytes / 1024 / 1024).toFixed(1).replace('.', ',');
+  const formatDate = (iso) => {
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return null;
+    return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+  };
+
+  fetch(`./downloads/version.json?t=${Date.now()}`, { cache: 'no-cache' })
+    .then((res) => (res.ok ? res.json() : null))
+    .then((manifest) => {
+      if (!manifest) return;
+
+      if (heroCtaNote && manifest.prod && manifest.prod.sizeBytes) {
+        heroCtaNote.textContent = `APK для Android · ${formatMb(manifest.prod.sizeBytes)} МБ · ставится напрямую, без Google Play`;
+      }
+
+      if (devBetaNote && manifest.beta) {
+        const parts = [];
+        if (manifest.beta.sizeBytes) parts.push(`${formatMb(manifest.beta.sizeBytes)} МБ`);
+        const date = manifest.beta.updatedAt ? formatDate(manifest.beta.updatedAt) : null;
+        if (date) parts.push(`собрано ${date}`);
+        if (parts.length) devBetaNote.textContent = parts.join(' · ');
+      }
+    })
+    .catch(() => {
+      // Лендинг — статика без бэкенда, манифест мог не задеплоиться ещё
+      // или сеть подвела; тексты в HTML — валидный фолбэк сами по себе.
+    });
 })();
