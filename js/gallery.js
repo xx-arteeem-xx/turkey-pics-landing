@@ -59,6 +59,8 @@
       img.src = item.preview;
       img.loading = 'lazy';
       img.decoding = 'async';
+      // Яндекс.Диск режет hotlink по Referer с чужих доменов (даёт 403) — без него отдаёт нормально.
+      img.referrerPolicy = 'no-referrer';
       img.alt = `Фото из поездки, ${new Date(item.created).toLocaleDateString('ru-RU')}`;
       tile.appendChild(img);
 
